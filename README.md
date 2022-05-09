@@ -6,7 +6,7 @@ This project is the front-end of Ricetta, the app that allows to create, store, 
 Make sure to follow all these steps below. Do not miss any steps or you won't be able to run this application.
 
 ### Clone this repository
-
+Use the following command:
     $ git clone https://github.com/anastasiadjk/ricetta-react.git
 
 ### Install the Dependencies
@@ -39,7 +39,7 @@ Install latest version of node on your machine.
     https://nodejs.org/en/
     
 Clone ricetta-backend project from ricetta-back-end repository.
-   $ git clone https://github.com/anastasiadjk/ricetta-back-end.git
+    $ git clone https://github.com/anastasiadjk/ricetta-back-end.git
    
 Next from the project folder install all the dependencies:
 
