@@ -50,8 +50,6 @@ class Table extends Component {
     render() {
         const { pageSize, currentPage, selectedCategory, recipes: allRecipes } = this.state;
 
-        const { length: count } = this.state.recipes;
-        if (count === 0) return <p>Tere are NO recipes in the database :(</p>
 
         //filtering
         const filtered = selectedCategory && selectedCategory._id
