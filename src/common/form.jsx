@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Joi from 'joi-browser';
 import Input from './input';
 import Select from './select';
-//down new code
 import TextBox from './textBox';
 
 class Form extends Component {
@@ -20,7 +19,7 @@ class Form extends Component {
         return errors;
     }
 
-    //input distract into name, value
+    
     validateProperty = ({ name, value }) => {
         const obj = { [name]: value };
         const schema = { [name]: this.schema[name] }
@@ -86,7 +85,7 @@ class Form extends Component {
         );
     }
 
-    //new code down
+  
     renderTextbox(name, label) {
         const { data, errors } = this.state;
 
