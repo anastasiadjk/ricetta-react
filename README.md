@@ -23,8 +23,16 @@ To start the react-app, from the project folder run:
 
     npm start
     
-At this point you will not see anything as you need to have the back-end of this app running in parallel and have MongoDB installed. 
+At this point the app is not working as you need to have the back-end of this app running in parallel and have MongoDB installed. 
 Below you can find how to set up the back-end of the Ricetta app and MongoDB.
+
+### Install MongoDB
+
+To run this project, you need to install the latest version of MongoDB Community Edition first.
+
+https://docs.mongodb.com/manual/installation/
+
+Once you install MongoDB, make sure it's running.
     
 ### Back-end setup 
 Install latest version of node on your machine.
@@ -44,19 +52,35 @@ Run the following command from the project folder:
 
 This will launch the Node server on port 3900
 
-    
-### Install MongoDB
-
-To run this project, you need to install the latest version of MongoDB Community Edition first.
-
-https://docs.mongodb.com/manual/installation/
-
-Once you install MongoDB, make sure it's running.
 
     
 ### Populate the Database
+At this point you have the MongoDB installed and connected to the server that is running. 
+Go to your react-app. If you closed it from the react project folder run again:
+    npm start
+The button ALL RECIPES should appear on the left in your react-app. To be able to add a new recipe we should first populate DB with categories, like (breakfast, lunch, dinner). 
+#### You can do that directly in MongoDB
+For that go to MongoDB Compass (a tool installed together with MongoDB).
+Under the ricetta database (that was created automatically when connecting to MongoDB in back-end) check if collection with the name 'categories' exists.
+If not create a new collection with the name 'categories'. To add data in the collection go to the categories collection and click the button "add data" -> insert document.
+Next add a key value pair to an existing object like shown below. (The ID is given automatically).
 
-You can populate the DB using postman
+         {
+          "_id": {
+            "$oid": "6278e7fdc8f404e4800bfc3f"
+          },
+          "name": "breakfast"  
+        }
+
+#### Populating categories using POSTMAN
+
+In Postman choose POST request to ---> http://localhost:3900/api/categories
+Choose Body, raw, JSON. Insert key value pair in the following way:
+
+{
+ "name":"dinner"
+}
+
 !!!The Postman Chrome app can only run on the Chrome browser!!!
 
 
